@@ -245,6 +245,18 @@ wheels = [
 ]
 
 [[package]]
+name = "clck"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/91/a7/9b9b86f7e9de12093ab4eaa6ec8ba1f4fcab9ca0434b5b04e596221a6ecb/clck-1.0.0.tar.gz", hash = "sha256:488f99e46f8ef3f64855bdc383962c24ce70f28aa52f2a910683a509e578bd9e", size = 2403, upload-time = "2023-06-27T16:00:16.999Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/23/ec/5162650539a29ac57b9bea339f86e2d437e7a49d88bec5f1674d71615f2a/clck-1.0.0-py3-none-any.whl", hash = "sha256:93f6b920d7c0992b1add1ba11e46482d57136a2ced441816a68f4ffe4ee72d79", size = 2611, upload-time = "2023-06-27T16:00:13.718Z" },
+]
+
+[[package]]
 name = "cli-helpers"
 version = "2.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -306,6 +318,8 @@ name = "data-engineering-bootcamp"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "clck" },
+    { name = "click" },
     { name = "pandas" },
     { name = "psycopg2-binary" },
     { name = "pyarrow" },
@@ -321,6 +335,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "clck", specifier = ">=1.0.0" },
+    { name = "click", specifier = ">=8.1.7" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "psycopg2-binary", specifier = ">=2.9.11" },
     { name = "pyarrow", specifier = ">=22.0.0" },
